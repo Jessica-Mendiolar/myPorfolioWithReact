@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import './sidebar.css';
-import { FaReact, FaGraduationCap,  } from "react-icons/fa";
-import { AiOutlineHome, AiOutlineUser, AiOutlineContacts} from "react-icons/ai";
-import { BsBriefcase, BsFillLayersFill } from "react-icons/bs";
-import { BiNote } from "react-icons/bi";
 
 const Sidebar = () => {
+    const [toggle, showMenu] = useState(false);
     return (
-        <aside className="aside">
+        <>
+        <aside className={toggle ? "aside show-menu" : "aside"}>
             <a href="#home" className="nav__logo">JM
-                <FaReact />
+               
             </a>
 
             <nav className="nav">
@@ -17,43 +15,37 @@ const Sidebar = () => {
                     <ul className="nav__list">
                         <li className="nav__item">
                             <a href="#home" className="nav__link">
-                            <AiOutlineHome/>
+                            <i className="icon-home"></i>
                             </a>
                         </li>
 
                         <li className="nav__item">
                             <a href="#about" className="nav__link">
-                            <AiOutlineUser/>
+                            <i className="icon-user-following"></i>
                             </a>
                         </li>
 
                         <li className="nav__item">
                             <a href="#services" className="nav__link">
-                            <BsBriefcase/>
+                            <i className="icon-briefcase"></i>
                             </a>
                         </li>
 
                         <li className="nav__item">
                             <a href="#resume" className="nav__link">
-                            <FaGraduationCap/>
+                            <i className="icon-graduation"></i>
                             </a>
                         </li>
 
                         <li className="nav__item">
                             <a href="#portfolio" className="nav__link">
-                           < BsFillLayersFill/>
+                            <i className="icon-layers"></i>
                             </a>
-                        </li>
-
-                        <li className="nav__item">
-                            <a href="#blog" className="nav__link">
-                            <BiNote/>
-                            </a>
-                        </li>
+                        </li>      
 
                         <li className="nav__item">
                             <a href="#contact" className="nav__link">
-                            <AiOutlineContacts/>
+                            <i className="icon-bubble"></i>
                             </a>
                         </li>
 
@@ -62,9 +54,16 @@ const Sidebar = () => {
             </nav>
 
             <div className="nav__footer">
-                <span className="copyright">&copy; 2022 -2023.</span>
+                <span className="copyright">Copyright&copy;2023. Jessica Mendiolar. <br /> All right reserved.</span>
             </div>
         </aside>
+
+        <div className={toggle ? "nav__toggle nav__toggle-open" : "nav__toggle"} onClick={()=> showMenu(!toggle)}>
+            <i className="icon-menu">
+                
+            </i>
+        </div>
+        </>
     )
 }
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import './about.css';
 import AboutBox from './AboutBox'
+import AboutMe from "../../assets/avatar.png"
+import Avatar from "../../assets/Mendiolar-Jessica-cv.pdf"
 
 
 const About = () => {
@@ -9,21 +11,24 @@ const About = () => {
             <h2 className="section___title">About Me</h2>
 
             <div className="about__container grid">
-                <img src="" alt="" className="about__img" />
+                <img src={AboutMe} alt="" className="about__img" />
 
                 <div className="about__data grid">
                     <div className="about__info">
                         <p className="about__description">
-                            I am Jessica, web developer from Buenos Aires, Argentina.
-                            I have rich experience in web site desing and building and customuzation,
-                            also i am good at backend.</p>
-                        <a href="" className="btn">Download CV</a>
+                       Hi, I'm Jess! I'm Full-stack developer with large experience participating
+                        in a variety of projects. 
+                        Knowledge and skills in agile methodologies.
+                        Proactive, curious, 
+                  excellent personal relationships and efficient conflict resolver.
+            Strong in high-demand work environments.</p>
+                        <a href={Avatar} className="btn" download="Jessica_Mendiolar_CV"><i className='icon-cloud-download'></i>  Download CV</a>
                     </div>
 
                     <div className='about__skills grid'>
                         <div className='skills__data'>
                             <div className='skills__titles'>
-                                <h3 className='skills__name'>lorem</h3>
+                                <h3 className='skills__name'>Full Stack Developer MERN</h3>
                                 <span className='skills__number '>90%</span>
                             </div>
 
@@ -34,7 +39,7 @@ const About = () => {
 
                         <div className='skills__data'>
                             <div className='skills__titles'>
-                                <h3 className='skills__name'>lorem</h3>
+                                <h3 className='skills__name'>Tools Design and UX</h3>
                                 <span className='skills__number '>70%</span>
                             </div>
 
@@ -45,7 +50,7 @@ const About = () => {
 
                         <div className='skills__data'>
                             <div className='skills__titles'>
-                                <h3 className='skills__name'>lorem</h3>
+                                <h3 className='skills__name'>Cibersegurity</h3>
                                 <span className='skills__number '>60%</span>
                             </div>
 
