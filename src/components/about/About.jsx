@@ -22,7 +22,7 @@ const About = () => {
                         Proactive, curious, 
                   excellent personal relationships and efficient conflict resolver.
             Strong in high-demand work environments.</p>
-                        <a href={Avatar} className="btn" download="Jessica_Mendiolar_CV"><i className='icon-cloud-download'></i>  Download CV</a>
+                        <a href={Avatar} className="btn" download="Mendiolar-Jessica-cv.pdf"><i className='icon-cloud-download'></i>  Download cv</a>
                     </div>
 
                     <div className='about__skills grid'>
